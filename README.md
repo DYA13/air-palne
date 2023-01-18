@@ -1,7 +1,5 @@
-# air-palne-
+# Air plane booking seats
 
 HTML, CSS, JS
-
-![Image alt](https://github.com/DYA13/air-palne-/blob/main/plane.jpg)
 
 <img src="plane.jpg" width="300">
