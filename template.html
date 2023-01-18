@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Выбери тур для отдыха</title>
+  <link rel="stylesheet" href="style/index.css">
+
+</head>
+
+<body>
+  <div class="container app">
+
+    <h1 class="title">Выберите тур</h1>
+    <main class="person-data">
+      <form class="field">
+        <label class="field__label">Укажите количество человек (max: 6)</label>
+        
+        <select class="field__select" id="tour" name="tour">
+          <option value="1">Мальдивы</option>
+          <option value="2">Индия</option>
+          <option value="3">Египет</option>
+          <option value="4">Турция</option>
+          <option value="5">Сочи</option>
+        </select>
+        
+        <input class="field__input" id="count" name="count" type="number" placeholder="#" min="1" max="6" required="">
+        
+        <button class="btn-confirm" type="submit">Подтвердить</button>
+      </form>
+    </main>
+
+    <main class="person-data">
+      <form class="person">
+        <h2 class="person__title">Пассажир #1</h2>
+        
+        <div class="field">
+          <label class="field__label">ФИО</label>
+          <input class="field__input" id="name0" name="name" type="text" placeholder="Введите ваше ФИО" required="">
+        </div>
+
+        <div class="field">
+          <label class="field__label">Номер билета (10 цифр)</label>
+          <input class="field__input" id="ticket0" name="ticket" type="text" placeholder="Номер билета" required="" minlength="10" maxlength="10">
+        </div>
+        
+        <button class="btn-confirm" type="submit">Подтвердить</button>
+      </form>
+    </main>
+    <main class="person-data">
+      <form class="choises-seat">
+        <fieldset class="plane" name="plane">
+          <div class="cockpit">
+            <h1 class="cockpit-title">Выберите 1 место</h1>
+            <button class="cockpit-confirm" type="submit">Подтвердить</button>
+          </div>
+
+          <div class="exit fuselage"></div>
+          
+          <ol class="fuselage">
+            <li>
+              <ol class="seats">
+                <li class="seat">
+                  <label>
+                    <input name="seat" type="checkbox" value="1A">
+                  </label>
+                </li>
+                
+                <li class="seat"><label><input name="seat" type="checkbox" value="1B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="1C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="1D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="1E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="1F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="2A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="2B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="2C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="2D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="2E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="2F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="3A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="3B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="3C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="3D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="3E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="3F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="4A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="4B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="4C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="4D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="4E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="4F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="5A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="5B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="5C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="5D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="5E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="5F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="6A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="6B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="6C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="6D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="6E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="6F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="7A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="7B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="7C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="7D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="7E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="7F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="8A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="8B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="8C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="8D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="8E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="8F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="9A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="9B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="9C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="9D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="9E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="9F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="10A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="10B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="10C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="10D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="10E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="10F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="11A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="11B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="11C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="11D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="11E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="11F"></label></li>
+              </ol>
+            </li>
+          </ol>
+          <div class="exit fuselage"></div>
+          <ol class="fuselage">
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="12A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="12B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="12C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="12D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="12E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="12F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="13A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="13B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="13C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="13D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="13E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="13F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="14A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="14B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="14C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="14D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="14E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="14F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="15A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="15B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="15C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="15D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="15E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="15F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="16A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="16B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="16C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="16D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="16E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="16F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="17A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="17B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="17C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="17D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="17E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="17F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="18A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="18B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="18C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="18D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="18E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="18F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="19A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="19B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="19C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="19D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="19E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="19F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="20A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="20B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="20C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="20D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="20E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="20F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="21A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="21B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="21C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="21D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="21E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="21F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="22A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="22B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="22C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="22D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="22E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="22F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="23A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="23B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="23C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="23D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="23E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="23F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="24A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="24B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="24C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="24D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="24E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="24F"></label></li>
+              </ol>
+            </li>
+            <li>
+              <ol class="seats">
+                <li class="seat"><label><input name="seat" type="checkbox" value="25A"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="25B"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="25C"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="25D"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="25E"></label></li>
+                <li class="seat"><label><input name="seat" type="checkbox" value="25F"></label></li>
+              </ol>
+            </li>
+          </ol>
+          <div class="exit fuselage"></div>
+        </fieldset>
+      </form>
+    </main>
+  </div>
+
+</body>
+
+</html>
