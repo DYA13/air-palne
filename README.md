@@ -1,4 +1,4 @@
 # air-palne-
 HTML, CSS, JS
 
-![Image alt](https://github.com/{username}/{repository}/raw/{branch}/{path}/image.png)
+![Image alt](https://github.com/DYA13/air-palne-/blob/main/plane.jpg)
