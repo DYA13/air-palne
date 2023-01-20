@@ -1,12 +1,12 @@
-export const getStorage = () => {
-if (localStorage.getItem('tour')) {
-    return JSON.parse(localStorage.getItem('tour'))
+export const getStorage = (id) => {
+if (localStorage.getItem(`tour-${id}`)) {
+    return JSON.parse(localStorage.getItem(`tour-${id}`))
 } else {
     return [];
 }
 };
 
-export const setStorage = (data) => {
+export const setStorage = (id, data) => {
     const storage =getStorage();
     const filterBooking = storage.filter(item => {
         for (let i = 0; i < data.length; i++){
@@ -18,6 +18,6 @@ export const setStorage = (data) => {
     })
 
     const newBooking = [...filterBooking, ...data];
-    
-    localStorage.setItem('tour', JSON.stringify(data))
+
+    localStorage.setItem(`tour-${id}`, JSON.stringify(data))
 }
