@@ -30,7 +30,7 @@ const createExit = () => {
     })
     return fuselage;
 }
-const createBlockSeat = (n, count) => {
+const createBlockSeat = (n, count, bookingSeat) => {
     const letters = ['A', 'B', 'C', 'D', 'F'];
 
     const fuselage = createElement('ol', {
@@ -51,11 +51,14 @@ const createBlockSeat = (n, count) => {
             });
 
             const wrapperCheck = createElement('label');
+            const seatValue = `${i}${letter}`;
 
             const check = createElement('input', {
                 name: 'seat',
                 type: 'checkbox',
-                value: `${i}${letter}`,
+                value: seatValue,
+                disabled: bookingSeat.includes(seatValue),
+
             });
 
       
@@ -80,6 +83,8 @@ const createBlockSeat = (n, count) => {
 
 const createAirplane = (title, tourData) => {
     const scheme = tourData.scheme;
+    const bookingSeat = getStorage(tourData.id).map(item => item.seat)
+
     const choicesSeat = createElement('form', {
         className: 'choises-seat',
     });
@@ -100,7 +105,7 @@ const createAirplane = (title, tourData) => {
         }
 
         if (typeof type === 'number') {
-            const blockSeat = createBlockSeat(n, type);
+            const blockSeat = createBlockSeat(n, type, bookingSeat);
             n = n + type;
             return blockSeat;
 
@@ -117,7 +122,8 @@ const createAirplane = (title, tourData) => {
 
 };
 
-const checkSeat = (form, data) => {
+const checkSeat = (form, data, id) => {
+    const bookingSeat = getStorage(id).map(item => item.seat)
 form.addEventListener('change', () => {
  const formData = new FormData(form);
  const checked = [...formData].map(([,value]) => value)
@@ -128,6 +134,13 @@ form.addEventListener('change', () => {
             item.disabled = true;
         }
     })
+ } else {
+    [...form].forEach(item => {
+if(!bookingSeat.includes(item.value)){
+item.disabled = false;
+}
+    })
+
  }
 
 });
@@ -143,7 +156,7 @@ form.addEventListener('submit', (e) =>{
 
     };
 
-    setStorage(data);
+    setStorage(id, data);
 
     form.remove();
 
@@ -162,7 +175,7 @@ const title = `Выбирите ${declOfNum(data.length, ['место', 'мес�
 
 const choiseForm = createAirplane(title, tourData);
 
-checkSeat(choiseForm, data)
+checkSeat(choiseForm, data, tourData.id)
 
 main.append(choiseForm);
 };

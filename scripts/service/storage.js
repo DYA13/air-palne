@@ -7,7 +7,7 @@ if (localStorage.getItem(`tour-${id}`)) {
 };
 
 export const setStorage = (id, data) => {
-    const storage =getStorage();
+    const storage =getStorage(id);
     const filterBooking = storage.filter(item => {
         for (let i = 0; i < data.length; i++){
             if(data[i].ticket === item.ticket){
