@@ -1,5 +1,7 @@
 import createElement from "./createElement.js";
 import declOfNum from "./declOfnum.js";
+import { setStorage, getStorage } from "../service/storage.js";
+
 
 const createCockpit = (titleText) => {
     const cockpit = createElement('div', {
@@ -123,7 +125,7 @@ form.addEventListener('change', () => {
  if (checked.length === data.length) {
     [...form].forEach(item => {
         if(item.checked === false && item.name === 'seat'){
-            item.disabled = ture;
+            item.disabled = true;
         }
     })
  }
@@ -140,6 +142,8 @@ form.addEventListener('submit', (e) =>{
         data[i].seat = booking[i];
 
     };
+
+    setStorage(data);
 
     form.remove();
 
