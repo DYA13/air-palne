@@ -129,6 +129,8 @@ form.addEventListener('change', () => {
  }
 
 });
+
+
 form.addEventListener('submit', (e) =>{
     e.preventDefault();
     const formData = new FormData(form);
@@ -138,6 +140,16 @@ form.addEventListener('submit', (e) =>{
         data[i].seat = booking[i];
 
     };
+
+    form.remove();
+
+    document.body.innerHTML = `
+    <h1 class="title">Спасибо, хорошего полета! </h1>
+    <h2 class="title">${booking.length === 1 ? 
+        `Ваше место ${booking}`:
+        `Ваши места ${booking}`}
+     </h2>
+    `;
 });
 };
 
